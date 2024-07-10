@@ -1,0 +1,21 @@
+command to install virtual environment
+->pip intall pipenv # it instlll virtual environemnt #
+->pipenv --python 3.10 #it creates a virtual python environemnt#
+->pipenv shell #it let us inside the virtual environemntthat we have created#
+->exit #to come out of the virtual environemnt#
+->pip freeze #to see the list of the installed packages#
+
+command to install django 
+->django-admin startproject "project name" . #it stats a django project and  "." indicates that in this place#
+->python manage.py startapp "app_name" #it creates app inside django project#
+->python manage.py runserver #it runs the django server#
+
+
+command for GIT 
+->git add . #it adds all changed files into staging area#
+->git status #we can see the status of the files that are changed or not#
+->git branch #helps to check branch #
+->git init #git initialization while starting the project#
+->git commit -m "message" #to commit the code in git"
+->git push origin branchname #branchname= git branchname# #to push code in repo#
+->

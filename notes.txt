@@ -19,3 +19,13 @@ command for GIT
 ->git commit -m "message" #to commit the code in git"
 ->git push origin branchname #branchname= git branchname# #to push code in repo#
 ->
+
+Basic CLI commands
+1. cd folder name > go to that directory (folder)
+2. ls > list all the things in the current directory/location 
+3. cd .. > go one step back (folder/ directory)
+4. mkdir foldername (make directory > to create directory on current directory)
+5. rmdir foldername (remove directory> to dlt ro remove the directory)
+6. echo "content" filename.extension > it adds content in the created file 
+7. cat filename.extension (shows contents that are in file/files)
+8. rm filename.extension > to remove or dlt the file 

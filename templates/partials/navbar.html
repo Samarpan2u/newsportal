@@ -49,7 +49,8 @@
               </li>
               {% for cat in category %}
               <li>
-                <a href="categories.html" class="nav-link text-left">{{cat.name}}</a>
+                <a href="{% url "category" cat.id %}" class="nav-link text-left">{{cat.name}}</a>
+                {% comment %} <a href="sports" class="nav-link text-left">{{cat.name}}</a> {% endcomment %}
               </li>
               {% endfor %}
               <li><a href="contact.html" class="nav-link text-left">Contact</a></li>

@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from news.views import home_page
+from news.views import home_page, category
 from newsportal import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='homepage'),
+    path('category/<int:category_id>', category, name='category'),
+
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

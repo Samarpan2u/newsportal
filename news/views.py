@@ -7,7 +7,14 @@ def home_page(request):
     context = {
         "welcome" : "welcome to my custom page: dhoom tanananananaa",
         "editorial" : editor_picks
-                }
+                        }
     templates= "base.html"
     return render(request, templates, context)  
+
+def category(request, category_id):
+    news_category = News.objects.filter(category=category_id)
+    context = {
+            'news_category' : news_category   
+                      }
+    return render(request, 'pages/categories.html',context)
 

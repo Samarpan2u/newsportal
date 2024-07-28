@@ -19,9 +19,12 @@ from django.urls import path
 from news.views import home_page, category
 from newsportal import settings
 from django.conf.urls.static import static
+from news.views import contact_info
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='homepage'),
     path('category/<int:category_id>', category, name='category'),
+    path('contacts/', contact_info, name='contacts'),
+
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

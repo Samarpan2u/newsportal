@@ -20,12 +20,29 @@ class News (models.Model):
     views_count = models.PositiveIntegerField(default=0)
     is_editorial = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
-    
+
+      
 
     def __str__(self) -> str:
         return self.title
     
     class Meta:
         verbose_name_plural = 'News'
+
+class ContactUs (models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email_address = models.CharField(max_length=255)
+    phone_number = models.PositiveBigIntegerField(default=0)
+    message = models.TextField() 
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)  
+
+    def __str__(self) -> str:
+        return self.first_name + ' ' + self.last_name
+    
+    class Meta:
+        verbose_name_plural = 'ContactUs'
+
 
         

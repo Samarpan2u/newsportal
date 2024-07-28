@@ -51,11 +51,12 @@
               <li>
                 <a href="{% url "category" cat.id %}" class="nav-link text-left">{{cat.name}}</a>
                 {% comment %} <a href="sports" class="nav-link text-left">{{cat.name}}</a> {% endcomment %}
-              </li>
+                             </li>
               {% endfor %}
-              <li><a href="contact.html" class="nav-link text-left">Contact</a></li>
+               <li><a href="{% url "contacts" %}" class="nav-link text-left">Contact</a></li>
             </ul>                                                                                                                                                                                                                                                                                         
           </nav>
+          <p>Today's Date: {{ date_time }}</p>
 
         </div>
        

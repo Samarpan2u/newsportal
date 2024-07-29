@@ -30,16 +30,16 @@ class News (models.Model):
         verbose_name_plural = 'News'
 
 class ContactUs (models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    email_address = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=255,null=True,blank=True)
+    last_name = models.CharField(max_length=255,null=True,blank=True)
+    email_address = models.CharField(max_length=255,null=True,blank=True)
     phone_number = models.PositiveBigIntegerField(default=0)
-    message = models.TextField() 
+    message = models.TextField(null=True,blank=True) 
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)  
 
-    def __str__(self) -> str:
-        return self.first_name + ' ' + self.last_name
+    def __str__(self):
+        return "contact_message"
     
     class Meta:
         verbose_name_plural = 'ContactUs'

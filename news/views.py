@@ -41,3 +41,15 @@ def contact_info(request):
         print (form.errors)
 
     return render(request, 'pages/contacts.html')
+
+def search(request):
+    if request.method == "GET":
+        query = request.GET ["query"]
+        search_data = News.objects.filter(title__contains = query)
+        context = {
+            'search_data' : search_data
+        }
+    else:
+        return redirect('homepage')
+    return render(request, "search.html", context) 
+

@@ -39,8 +39,10 @@ def contact_info(request):
         return redirect('homepage')
     else:
         print (form.errors)
-
-    return render(request, 'pages/contacts.html')
+    context = {
+        "form":form
+        }
+    return render(request, 'pages/contacts.html',context)
 
 def search(request):
     if request.method == "GET":
@@ -52,4 +54,3 @@ def search(request):
     else:
         return redirect('homepage')
     return render(request, "search.html", context) 
-

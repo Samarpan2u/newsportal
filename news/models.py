@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=50)
@@ -30,14 +31,15 @@ class News (models.Model):
         verbose_name_plural = 'News'
 
 class ContactUs (models.Model):
-    first_name = models.CharField(max_length=255,null=True,blank=True)
-    last_name = models.CharField(max_length=255,null=True,blank=True)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     email_address = models.CharField(max_length=255,null=True,blank=True)
     phone_number = models.PositiveBigIntegerField(default=0)
     message = models.TextField(null=True,blank=True) 
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)  
 
+  
     def __str__(self):
         return "contact_message"
     

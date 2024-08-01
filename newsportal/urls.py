@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='homepage'),
     path('category/<int:category_id>', category, name='category'),
-    path('contacts/', contact_info, name='contacts'),
+    path('contacts/', contact_info, name='contactme'),
     path('search/', search, name='search'),
 
 

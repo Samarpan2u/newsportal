@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from news.views import home_page, category, contact_info, search
+from news.views import home_page, category, contact_info, search, subscribe
 from newsportal import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -25,6 +25,7 @@ urlpatterns = [
     path('category/<int:category_id>', category, name='category'),
     path('contacts/', contact_info, name='contactme'),
     path('search/', search, name='search'),
+    path('subscribe/',subscribe, name='subscribe')
 
 
 

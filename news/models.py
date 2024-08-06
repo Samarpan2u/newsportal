@@ -47,4 +47,25 @@ class ContactUs (models.Model):
         verbose_name_plural = 'ContactUs'
 
 
+class Subscriber (models.Model):
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.email
+    class Meta:
+        verbose_name_plural = 'Subscriber'
+
+class SocialMedia (models.Model):
+    facebook = models.URLField()
+    twitter = models.URLField()
+    instagram = models.URLField()
+
+    def __str__(self):
+        return "social media links"
+    class Meta:
+        verbose_name_plural = 'SocialMedia'
+
+          
+
+
         

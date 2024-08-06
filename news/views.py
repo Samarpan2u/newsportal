@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from news.models import News, Category
 from datetime import datetime
-from news.forms import ContactUsForm
+from news.forms import ContactUsForm,SubscriberForm
 
 # Create your views here.
 def home_page(request):
@@ -59,3 +59,10 @@ def search(request):
     else:
         return redirect('homepage')
     return render(request, "search.html", context) 
+
+def subscribe(request) :
+    form = SubscriberForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('homepage')
+    return (request,"partials/footer.html")
